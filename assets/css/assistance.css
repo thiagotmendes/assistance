@@ -1,0 +1,31 @@
+.page-header {
+     padding-bottom: 0px !important;
+     margin: 0px 0 0px !important;
+     border-bottom: none !important;
+}
+
+#header .page-header {
+  margin: 0px 0 0px !important;
+}
+
+/* MENU */
+.navbar-assistance{
+  background-color: #103d57;
+  border-radius: 0px !important;
+  border-bottom: #082d42 solid 6px;
+}
+
+.navbar-assistance .navbar-nav > li > a{
+  color: #fff;
+}
+
+.navbar-assistance .navbar-nav > li > a:hover,
+.navbar-assistance .navbar-nav > li > a:focus{
+  background-color: #082d42;
+}
+
+.navbar-assistance .navbar-nav > li.active > a,
+.navbar-assistance .navbar-nav > li.active > a:hover,
+.navbar-assistance .navbar-nav > li.active > a:focus{
+  background-color: #082d42;
+}
