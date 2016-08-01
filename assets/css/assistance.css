@@ -1,11 +1,96 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+body{
+  font-family: 'Lato', sans-serif !important;
+}
+
+h1,h2,h3,h4,h5,h6{
+  color: #103d57;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+  color: #103d57;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{
+  color: #06476c;
+}
+
 .page-header {
      padding-bottom: 0px !important;
      margin: 0px 0 0px !important;
      border-bottom: none !important;
 }
 
+#header #main-navigation{
+  margin: 20px 0 0 !important;
+}
+
 #header .page-header {
   margin: 0px 0 0px !important;
+}
+
+.main-home{
+  min-height: 600px;
+}
+
+.inner{
+  padding: 40px 0;
+}
+
+.institucional{
+  background-color: #f2f2f2;
+}
+
+.btn{
+  border-radius: 0px !important;
+}
+
+.btn-cta{
+  background-color: #103d57;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.btn-cta:hover{
+  background-color: #014972;
+  color: #fff;
+}
+
+.titulo-colucoes{
+  text-align: center;
+}
+
+.titulo-servicos{
+  font-size: 22px;
+  margin: 0px;
+}
+
+.box-servicos{
+  border: #e7e7e7 solid 1px;
+  
+}
+
+footer{
+  background: url('../images/rodape.jpg') center top no-repeat;
+  padding: 40px 0 15px !important;
+  margin-top: 29px;
+}
+/***************/
+.alignleft {
+    float: left;
+    margin: 0.5em 1em 0.5em 0;
+}
+
+.center-block, .aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignright {
+    float: right;
+    margin: 0.5em 0 0.5em 1em;
 }
 
 /* MENU */
@@ -17,6 +102,8 @@
 
 .navbar-assistance .navbar-nav > li > a{
   color: #fff;
+  text-transform: uppercase;
+  transition-duration: 0.3s;
 }
 
 .navbar-assistance .navbar-nav > li > a:hover,
@@ -29,3 +116,4 @@
 .navbar-assistance .navbar-nav > li.active > a:focus{
   background-color: #082d42;
 }
+/********************************************************/

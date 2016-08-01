@@ -102,5 +102,5 @@
 		</div><!-- #main-navigation-->
 	</header><!-- #header -->
 
-	<div id="wrapper" class="container">
-		<div class="row">
+	<div id="wrapper" class="">
+		<div class="">

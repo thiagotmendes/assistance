@@ -20,6 +20,9 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 600;
 }
 
+// OUTRAS FUNÇÕES
+require_once get_template_directory()."/functions/function.php";
+
 /**
  * Odin Classes.
  */
