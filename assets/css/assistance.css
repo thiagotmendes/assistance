@@ -84,6 +84,51 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{
 .page-interno{
   min-height: 600px;
 }
+
+.site-title{
+  margin-top: 20px;
+}
+
+.area{
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.btn-consultor{
+  background-color: #d9bd0d;
+  color: #103d57;
+  text-transform: uppercase;
+}
+
+.btn-consultor:hover{
+  background-color: #103d57;
+  color: #fff;
+}
+
+.top-consultor{
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.tel-header{
+  font-weight: bold;
+  font-size: 26px;
+  padding-left: 15px;
+  padding-top: 15px;
+  display: block;
+  float: left;
+}
+
+.titulo-interno{
+  padding: 30px 0;
+}
+
+.titulo-menu-interno{
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 /****************************************************************/
 
 .menu-lateral{

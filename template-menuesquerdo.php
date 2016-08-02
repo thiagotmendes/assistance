@@ -5,7 +5,27 @@
 
         <section class="titulo-interno">
           <div class="container">
-            <h1><?php the_title() ?></h1>
+            <?php
+            $id = get_the_id();
+            $titulo_corrente = get_the_title();
+            $pagina_anterior = get_post_ancestors($id);
+
+            if(!empty($pagina_anterior)){
+              $idPagina = $pagina_anterior[0];
+            } else {
+              $idPagina = $id;
+            }
+            $arg = array(
+              'post_type'       => 'page',
+              'posts_per_page'  => 20,
+              'orderby'         => 'menu_order',
+              'order'           => 'ASC',
+              'post_parent'     => $idPagina
+            );
+
+            echo "<h1 class='titulo-menu-interno'>". get_post_field('post_title', $idPagina) . "</h1>";
+            ?>
+            <!--<h1><?php the_title() ?></h1> -->
           </div>
         </section>
         <section class="conteudo-interno">
@@ -13,25 +33,6 @@
             <div class="row">
               <div class="col-md-3">
                 <?php
-                  $id = get_the_id();
-                  $titulo_corrente = get_the_title();
-                  $pagina_anterior = get_post_ancestors($id);
-
-                  if(!empty($pagina_anterior)){
-                    $idPagina = $pagina_anterior[0];
-                  } else {
-                    $idPagina = $id;
-                  }
-                  $arg = array(
-                    'post_type'       => 'page',
-                    'posts_per_page'  => 20,
-                    'orderby'         => 'menu_order',
-                    'order'           => 'ASC',
-                    'post_parent'     => $idPagina
-                  );
-
-                  echo "<h3 class='titulo-menu-interno'>". get_post_field('post_title', $idPagina) . "</h3>";
-
                   $menu_lateral = new wp_query($arg);
                   if($menu_lateral->have_posts()):
                     echo "<ul class='menu-lateral'>";

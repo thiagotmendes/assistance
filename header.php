@@ -33,30 +33,18 @@
 	<header id="header" role="banner">
 		<div class="container">
 			<div class="page-header hidden-xs">
-				<?php if ( is_home() ) : ?>
-					<h1 class="site-title pull-left">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-							<img src="<?php echo get_template_directory_uri() ?>/assets/images/logo.png" alt="" />
-						</a>
-					</h1>
-					<div class="pull-right">
-						<img src="<?php echo get_template_directory_uri()."/assets/images" ?>/area-cliente.jpg" alt="" />
-					</div>
-					<!--<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>-->
-				<?php else : ?>
-					<div class="site-title h1 pull-left">
+					<div class="site-title pull-left">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 							<img src="<?php echo get_template_directory_uri() ?>/assets/images/logo.png" alt="" />
 						</a>
 					</div>
 					<div class="pull-right">
-						<img src="<?php echo get_template_directory_uri()."/assets/images" ?>/area-cliente.jpg" alt="" />
+						<div class="area">
+							<img src="<?php echo get_template_directory_uri()."/assets/images" ?>/area-cliente.jpg" alt="" />
+						</div>
+						<span class="tel-header"><img src="<?php echo get_template_directory_uri() ?>/assets/images/icon-phone-topo.png" alt="" /> (31) 3512-8000</span>
+						<button type="button" name="button" class="btn btn-consultor top-consultor">Fale com um consultor</button>
 					</div>
-					<!--<div class="site-description h2">
-						<?php //bloginfo( 'description' ); ?>
-					</div>-->
-				<?php endif ?>
-
 				<?php
 					$header_image = get_header_image();
 					if ( ! empty( $header_image ) ) :
