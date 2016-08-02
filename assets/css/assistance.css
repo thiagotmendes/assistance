@@ -2,6 +2,7 @@
 
 body{
   font-family: 'Lato', sans-serif !important;
+  margin-bottom: 0px !important;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -62,20 +63,72 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{
 }
 
 .titulo-servicos{
-  font-size: 22px;
+  font-size: 19px;
   margin: 0px;
 }
 
 .box-servicos{
   border: #e7e7e7 solid 1px;
-  
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
+.conteudo-servicos{
+  padding: 10px;
+}
+
+.anuncio-box{
+  margin-bottom: 15px;
+}
+
+.page-interno{
+  min-height: 600px;
+}
+/****************************************************************/
+
+.menu-lateral{
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.menu-lateral li a{
+  background-color: #103d57;
+  display: block;
+  color: #fff;
+  padding: 8px 9px;
+  margin-bottom: 10px;
+  transition-duration: 0.3s;
+}
+
+.menu-lateral li a:hover{
+  background-color: #d9bd0d;
+  color: #103d57;
+  text-decoration: none;
+}
+
+.menu-lateral li.activate a{
+  background-color: #d9bd0d;
+  color: #103d57;
+  text-decoration: none;
+}
+
+/**************************************************************/
 footer{
   background: url('../images/rodape.jpg') center top no-repeat;
-  padding: 40px 0 15px !important;
+  padding: 98px 0 15px !important;
   margin-top: 29px;
+  color: #fff;
 }
+
+.end-site{
+  margin-bottom: 18px;
+}
+
+.social img{
+  margin-left: 15px;
+}
+
 /***************/
 .alignleft {
     float: left;

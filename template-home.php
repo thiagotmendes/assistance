@@ -53,18 +53,77 @@
     <div class="container">
       <h2 class="titulo-colucoes">SOLUÇÕES EM PROTEÇÃO</h2>
       <div class="row">
+        <!-- INICIA OS SERVIÇOS -->
         <div class="col-md-3">
           <div class="box-servicos">
-            <img src="<?php echo $imageDir ?>/icon1.png" alt="" class="alignleft" />
-            <h3 class="titulo-servicos">Realização de vistorias em veículos</h3>
+            <div class="conteudo-servicos">
+              <img src="<?php echo $imageDir ?>/icon1.png" alt="" class="alignleft" />
+              <h3 class="titulo-servicos">Realização de vistorias em veículos</h3>
+            </div>
             <div class="clearfix"></div>
             <img src="<?php echo $imageDir ?>/f01.jpg" alt="" class="img-responsive" />
+          </div>
+        </div>
+        <!-- FINALIZA O BOX DE SERVIÇOS -->
+        <!-- INICIA OS SERVIÇOS -->
+        <div class="col-md-3">
+          <div class="box-servicos">
+            <div class="conteudo-servicos">
+              <img src="<?php echo $imageDir ?>/icon1.png" alt="" class="alignleft" />
+              <h3 class="titulo-servicos">Realização de vistorias em veículos</h3>
+            </div>
+            <div class="clearfix"></div>
+            <img src="<?php echo $imageDir ?>/f01.jpg" alt="" class="img-responsive" />
+          </div>
+        </div>
+        <!-- FINALIZA O BOX DE SERVIÇOS -->
+        <!-- INICIA OS SERVIÇOS -->
+        <div class="col-md-3">
+          <div class="box-servicos">
+            <div class="conteudo-servicos">
+              <img src="<?php echo $imageDir ?>/icon1.png" alt="" class="alignleft" />
+              <h3 class="titulo-servicos">Realização de vistorias em veículos</h3>
+            </div>
+            <div class="clearfix"></div>
+            <img src="<?php echo $imageDir ?>/f01.jpg" alt="" class="img-responsive" />
+          </div>
+        </div>
+        <!-- FINALIZA O BOX DE SERVIÇOS -->
+        <!-- INICIA OS SERVIÇOS -->
+        <div class="col-md-3">
+          <div class="box-servicos">
+            <div class="conteudo-servicos">
+              <img src="<?php echo $imageDir ?>/icon1.png" alt="" class="alignleft" />
+              <h3 class="titulo-servicos">Realização de vistorias em veículos</h3>
+            </div>
+            <div class="clearfix"></div>
+            <img src="<?php echo $imageDir ?>/f01.jpg" alt="" class="img-responsive" />
+          </div>
+        </div>
+        <!-- FINALIZA O BOX DE SERVIÇOS -->
+      </div>
+      <p align="center" class="inner">
+        <a href="#" class="btn btn-cta">VEJA TODOS OS NOSSOS BENEFÍCIOS</a>
+      </p>
+    </div>
+  </section>
+  <section class="noticias inner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Ultimas Notícias</h3>
+        </div>
+        <div class="col-md-6">
+          <div class="anuncio-box">
+            <img src="<?php echo $imageDir ?>/anuncio1.jpg" alt="" />
+          </div>
+          <div class="anuncio-box">
+            <img src="<?php echo $imageDir ?>/anucio2.jpg" alt="" />
           </div>
         </div>
       </div>
     </div>
   </section>
-
 </main>
 
 <?php get_footer() ?>
