@@ -56,25 +56,38 @@
         <?php
         $argServicos = array(
           'post_type'   => 'page',
-          'post_parent' => ''
+          'post_parent' => '9'
         );
-        ?>
-        <!-- INICIA OS SERVIÇOS -->
-        <div class="col-md-3">
-          <div class="box-servicos">
-            <div class="conteudo-servicos">
-              <img src="<?php echo $imageDir ?>/icon1.png" alt="" class="alignleft" />
-              <h3 class="titulo-servicos">Realização de vistorias em veículos</h3>
-            </div>
-            <div class="clearfix"></div>
-            <img src="<?php echo $imageDir ?>/f01.jpg" alt="" class="img-responsive" />
-          </div>
-        </div>
-        <!-- FINALIZA O BOX DE SERVIÇOS -->
 
+        $servicosHome = new wp_query($argServicos);
+        if ($servicosHome->have_posts()) {
+          while ($servicosHome->have_posts()) { $servicosHome->the_post();
+          ?>
+            <!-- INICIA OS SERVIÇOS -->
+            <div class="col-md-3">
+              <div class="box-servicos">
+                <div class="conteudo-servicos">
+                  <?php
+                  $image = get_field('icone');
+                  if( !empty($image) ): ?>
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="alignleft" />
+                  <?php endif; ?>
+                  <h3 class="titulo-servicos"> <a href="<?php the_permalink() ?>"> <?php the_title() ?> </a>  </h3>
+                </div>
+                <div class="clearfix"></div>
+                <a href="<?php the_permalink() ?>">
+                  <?php the_post_thumbnail( 'high', array( 'class' => 'img-responsive' ) ); ?>
+                </a>
+              </div>
+            </div>
+            <!-- FINALIZA O BOX DE SERVIÇOS -->
+          <?php
+          }
+        }
+        ?>
       </div>
       <p align="center" class="inner">
-        <a href="#" class="btn btn-cta">VEJA TODOS OS NOSSOS BENEFÍCIOS</a>
+        <a href="<?php echo esc_url( home_url( 'solucoes-em-protecao' ) ); ?>" class="btn btn-cta">VEJA TODOS OS NOSSOS BENEFÍCIOS</a>
       </p>
     </div>
   </section>
