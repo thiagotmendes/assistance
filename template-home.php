@@ -53,6 +53,12 @@
     <div class="container">
       <h2 class="titulo-colucoes">SOLUÇÕES EM PROTEÇÃO</h2>
       <div class="row">
+        <?php
+        $argServicos = array(
+          'post_type'   => 'page',
+          'post_parent' => ''
+        );
+        ?>
         <!-- INICIA OS SERVIÇOS -->
         <div class="col-md-3">
           <div class="box-servicos">
@@ -65,42 +71,7 @@
           </div>
         </div>
         <!-- FINALIZA O BOX DE SERVIÇOS -->
-        <!-- INICIA OS SERVIÇOS -->
-        <div class="col-md-3">
-          <div class="box-servicos">
-            <div class="conteudo-servicos">
-              <img src="<?php echo $imageDir ?>/icon1.png" alt="" class="alignleft" />
-              <h3 class="titulo-servicos">Realização de vistorias em veículos</h3>
-            </div>
-            <div class="clearfix"></div>
-            <img src="<?php echo $imageDir ?>/f01.jpg" alt="" class="img-responsive" />
-          </div>
-        </div>
-        <!-- FINALIZA O BOX DE SERVIÇOS -->
-        <!-- INICIA OS SERVIÇOS -->
-        <div class="col-md-3">
-          <div class="box-servicos">
-            <div class="conteudo-servicos">
-              <img src="<?php echo $imageDir ?>/icon1.png" alt="" class="alignleft" />
-              <h3 class="titulo-servicos">Realização de vistorias em veículos</h3>
-            </div>
-            <div class="clearfix"></div>
-            <img src="<?php echo $imageDir ?>/f01.jpg" alt="" class="img-responsive" />
-          </div>
-        </div>
-        <!-- FINALIZA O BOX DE SERVIÇOS -->
-        <!-- INICIA OS SERVIÇOS -->
-        <div class="col-md-3">
-          <div class="box-servicos">
-            <div class="conteudo-servicos">
-              <img src="<?php echo $imageDir ?>/icon1.png" alt="" class="alignleft" />
-              <h3 class="titulo-servicos">Realização de vistorias em veículos</h3>
-            </div>
-            <div class="clearfix"></div>
-            <img src="<?php echo $imageDir ?>/f01.jpg" alt="" class="img-responsive" />
-          </div>
-        </div>
-        <!-- FINALIZA O BOX DE SERVIÇOS -->
+
       </div>
       <p align="center" class="inner">
         <a href="#" class="btn btn-cta">VEJA TODOS OS NOSSOS BENEFÍCIOS</a>
@@ -112,6 +83,30 @@
       <div class="row">
         <div class="col-md-6">
           <h3>Ultimas Notícias</h3>
+          <?php
+          $argPost = array(
+            'post_type'       => 'post',
+            'posts_per_page'  => 6
+          );
+
+          $postHome = new wp_query($argPost);
+          if ($postHome->have_posts()) {
+            while ($postHome->have_posts()) { $postHome->the_post();
+            ?>
+              <div class="row">
+                <div class="col-md-3">
+                  <a href="'<?php the_permalink(); ?>'">  <?php the_post_thumbnail( 'high', array( 'class' => 'img-responsive' ) ); ?></a>
+                </div>
+                <div class="col-md-9">
+                  <h4><a href="#"> <?php the_title() ?> </a> </h4>
+                  <?php the_excerpt_limit(20) ?>
+                </div>
+              </div>
+            <?php
+            }
+          }
+          ?>
+
         </div>
         <div class="col-md-6">
           <div class="anuncio-box">

@@ -308,3 +308,15 @@ if ( is_woocommerce_activated() ) {
 	require get_template_directory() . '/inc/woocommerce/functions.php';
 	require get_template_directory() . '/inc/woocommerce/template-tags.php';
 }
+
+function the_excerpt_limit($limit) {
+    $excerpt = explode(' ', get_the_excerpt(), $limit);
+    if (count($excerpt)>=$limit) {
+        array_pop($excerpt);
+        $excerpt = implode(" ",$excerpt).'...';
+    } else {
+        $excerpt = implode(" ",$excerpt);
+    }
+        $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+        echo $excerpt;
+}
