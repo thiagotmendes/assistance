@@ -32,18 +32,18 @@
 
 	<header id="header" role="banner">
 		<div class="container">
-			<div class="page-header hidden-xs">
+			<div class="page-header ">
 					<div class="site-title pull-left">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 							<img src="<?php echo get_template_directory_uri() ?>/assets/images/logo.png" alt="" />
 						</a>
 					</div>
-					<div class="pull-right">
+					<div class="pull-right hidden-xs">
 						<div class="area">
 							<img src="<?php echo get_template_directory_uri()."/assets/images" ?>/area-cliente.jpg" alt="" />
 						</div>
 						<span class="tel-header"><img src="<?php echo get_template_directory_uri() ?>/assets/images/icon-phone-topo.png" alt="" /> (31) 3512-8000</span>
-						<button type="button" name="button" class="btn btn-consultor top-consultor">Fale com um consultor</button>
+						<button type="button" name="button" class="btn btn-consultor top-consultor" data-toggle="modal" data-target="#fale-consultor">Fale com um consultor</button>
 					</div>
 				<?php
 					$header_image = get_header_image();
@@ -65,7 +65,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand visible-xs-block" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-					<?php bloginfo( 'name' ); ?>
+					<?php //bloginfo( 'name' ); ?>
 				</a>
 			</div>
 			<nav class="collapse navbar-collapse navbar-main-navigation" role="navigation">
@@ -95,6 +95,19 @@
 			</nav><!-- .navbar-collapse -->
 		</div><!-- #main-navigation-->
 	</header><!-- #header -->
+
+	<!-- Modal -->
+  <div class="modal fade" id="fale-consultor" tabindex="-1" role="dialog" aria-labelledby="Fale Com Consultor" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Formulário consultor') ) :?>
+              <p class="msg-info">Gerencie seus Widgets pelo painel administrativo do Wordpress.</p>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  </div>
 
 	<div id="wrapper" class="">
 		<div class="">

@@ -320,3 +320,20 @@ function the_excerpt_limit($limit) {
         $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
         echo $excerpt;
 }
+
+if ( function_exists('register_sidebar') )
+    register_sidebar(array(
+        'name' => 'Formulario-consultor',
+        'before_widget' => '<div class="">',
+        'after_widget' => '</div>',
+        'before_title' => '<div class="titulo-consultor"><h3 class="">',
+        'after_title' => '</h3></div>',
+    )
+);
+
+/*
+Modo de uso:
+<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Lateral') ) :?>
+    <p class="msg-info">Gerencie seus Widgets pelo painel administrativo do Wordpress.</p>
+<?php endif; ?>
+*/

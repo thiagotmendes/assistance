@@ -17,7 +17,7 @@
 		<div class="container">
 			<div class="row">
 			  <div class="col-md-3">
-			    <img src="<?php echo get_template_directory_uri()."/assets/images" ?>/logo-baixo.png" alt="" />
+			    <img src="<?php echo get_template_directory_uri()."/assets/images" ?>/logo-baixo.png" alt="" style="margin-top: 40px;" />
 			  </div>
 				<div class="col-md-5">
 					<div class="end-site">
@@ -38,9 +38,8 @@
 				<div class="col-md-4">
 
 					<img src="<?php echo get_template_directory_uri()."/assets/images" ?>/newsletter.png" alt="" />
-					<div class="form-group">
-					  <label for=""></label>
-					  <input type="text" name="name" value="" placeholder="Entre com um endereço de email" class="form-control">
+					<div class="newsletter">
+						<?php echo do_shortcode('[contact-form-7 id="50" title="Newsletter"]') ?>
 					</div>
 
 					<div class="clearfix"></div>
